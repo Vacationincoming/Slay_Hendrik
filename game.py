@@ -1,3 +1,14 @@
+#Changed Workspace
+
+import os
+
+#|Workspace|#
+
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+
+
 from random import randint
 import time
 import winsound
@@ -124,12 +135,12 @@ while game_running == True:
 
     coins = 0
     shop = {"atk": 0, "hp": 0, "crit": 0, "heal": 0, "armor": 0, "dodge": 0, "hcompanion": 0, "dcompanion":0}
-    shop =  pickle.load(open("shop.dat", "rb"))
-    coins = pickle.load(open("coins.dat", "rb"))
+    shop =  pickle.load(open("Game recode/functions/shopdata/shop.dat", "rb"))
+    coins = pickle.load(open("Game recode/functions/shopdata/coins.dat", "rb"))
     shopc = True
 
     #coins = coins + 1
-    #pickle.dump(coins, open("coins.dat", "wb"))
+    #pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
     #pickle.dump(shop, open("shop.dat", "wb"))
     #print (coins)
 
@@ -184,8 +195,8 @@ while game_running == True:
                             print("You succesfully bought 1 Bloodrush!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -213,8 +224,8 @@ while game_running == True:
                             print("You succesfully bought 1 Remnant of the Gods!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -241,8 +252,8 @@ while game_running == True:
                             print("You succesfully bought 1 Hidden Dagger!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -269,8 +280,8 @@ while game_running == True:
                             print("You succesfully bought 1 Holy Water!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -297,8 +308,8 @@ while game_running == True:
                             print("You succesfully bought 1 Iron Plateing!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -325,8 +336,8 @@ while game_running == True:
                             print("You succesfully bought 1 Shrink Potion!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -353,8 +364,8 @@ while game_running == True:
                             print("You succesfully bought 1 Guardian Angel!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -381,8 +392,8 @@ while game_running == True:
                             print("You succesfully bought 1 Sekhmet!")
                             time.sleep(2)
                             shopc = True
-                            pickle.dump(coins, open("coins.dat", "wb"))
-                            pickle.dump(shop, open("shop.dat", "wb"))
+                            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                            pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
                         elif player_choice == "2" :
                             print("Canceled Payment")
                             time.sleep(2)
@@ -395,8 +406,8 @@ while game_running == True:
                 player_choice = input()
                 if player_choice == "1":
                     shopc = False
-                    pickle.dump(coins, open("coins.dat", "wb"))
-                    pickle.dump(shop, open("shop.dat", "wb"))
+                    pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
+                    pickle.dump(shop, open("Game recode/functions/shopdata/shop.dat", "wb"))
 
                 elif player_choice == "2":
                     shopc = True
@@ -406,8 +417,8 @@ while game_running == True:
                 time.sleep(1.5)
                 shopc = True
 
-    shop =  pickle.load(open("shop.dat", "rb"))
-    coins = pickle.load(open("coins.dat", "rb"))
+    shop =  pickle.load(open("Game recode/functions/shopdata/shop.dat", "rb"))
+    coins = pickle.load(open("Game recode/functions/shopdata/coins.dat", "rb"))
 
     if shop["atk"] == 1:
         player["attack_min"] = player["attack_min"] + 2
@@ -657,7 +668,7 @@ while game_running == True:
             new_round = False
             level_2 = True
             coins = coins + 1
-            pickle.dump(coins, open("coins.dat", "wb"))
+            pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
 
         elif monster_won:
             game_ends(monster["name"])
@@ -872,7 +883,7 @@ while game_running == True:
                 new_round = False
                 level_3 = True
                 coins = coins + 1
-                pickle.dump(coins, open("coins.dat", "wb"))
+                pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
 
             elif monster_won:
                 game_ends(monster2["name"])
@@ -1091,7 +1102,7 @@ while game_running == True:
                 level_3 = False
                 level_4 = True
                 coins = coins + 1
-                pickle.dump(coins, open("coins.dat", "wb"))
+                pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
 
             elif monster_won:
                 game_ends(monster3["name"])
@@ -1317,7 +1328,7 @@ while game_running == True:
                 level_4 = False
                 level_5 = True
                 coins = coins + 1
-                pickle.dump(coins, open("coins.dat", "wb"))
+                pickle.dump(coins, open("Game recode/functions/shopdata/coins.dat", "wb"))
 
             elif monster_won:
                 game_ends(monster4["name"])
